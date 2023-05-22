@@ -9,9 +9,38 @@ import moment from "moment";
 const NewTodoBtn = () => {
   const dispatch = useDispatch();
 
+  // const addcatergories = async () => {
+  //   const { value: catergories } = await Swal.fire({
+  //     title: "Select field validation",
+  //     input: "select",
+  //     inputOptions: {
+  //       urgent: "urgent",
+  //       study: "study",
+  //       later: "later",
+  //       important: "important",
+  //       completed: "completed",
+  //     },
+  //     inputPlaceholder: "Select a catergiory",
+  //     showCancelButton: true,
+  //   });
+
+  //   if (catergories) {
+  //     Swal.fire("You selected: " + catergories);
+  //   }
+  // };
+
   const newTodoItemModal = async () => {
     const { value } = await Swal.fire({
       input: "textarea",
+      // html:
+      //   "Some Text" +
+      //   "<br>" +
+      //   '<button type="button" role="button" tabindex="0" class="SwalBtn1 customSwalBtn">' +
+      //   "Button1" +
+      //   "</button>" +
+      //   '<button type="button" role="button" tabindex="0" class="SwalBtn2 customSwalBtn">' +
+      //   "Button2" +
+      //   "</button>",
       inputLabel: "New Task",
       inputPlaceholder: "Write a new task",
       showCancelButton: true,

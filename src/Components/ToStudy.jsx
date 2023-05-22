@@ -15,7 +15,7 @@ const ToStudy = () => {
     todo.text.toLowerCase().includes(searchInputValue)
   );
   return (
-    <Droppable droppableId="todos" key={nanoid()}>
+    <Droppable droppableId="toStudyTask" key={nanoid()}>
       {(provided, snapshot) => (
         <div
           className={classNames({
