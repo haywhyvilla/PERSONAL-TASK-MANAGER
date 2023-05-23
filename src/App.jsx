@@ -24,6 +24,7 @@ function App() {
     window.localStorage.setItem("showtheme", JSON.stringify(theme));
   }, [theme]);
 
+  // toggle dark and light mode
   const handleThemeSwitch = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
