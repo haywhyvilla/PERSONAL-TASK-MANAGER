@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { nanoid } from "nanoid";
 import classNames from "classnames";
 import { Droppable } from "react-beautiful-dnd";
 import { useSelector } from "react-redux";
 import TodoList from "./TodoList";
+
 const Urgent = () => {
   const urgentTask = useSelector((state) => state.todoapp.urgentTask);
+
   return (
     <Droppable droppableId="urgentTask" key={nanoid()}>
       {(provided, snapshot) => (

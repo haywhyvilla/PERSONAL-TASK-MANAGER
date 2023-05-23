@@ -14,6 +14,7 @@ const ToStudy = () => {
   const filteredTodoTask = todos.filter((todo) =>
     todo.text.toLowerCase().includes(searchInputValue)
   );
+
   return (
     <Droppable droppableId="toStudyTask" key={nanoid()}>
       {(provided, snapshot) => (

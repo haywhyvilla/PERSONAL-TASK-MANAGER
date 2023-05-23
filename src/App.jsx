@@ -15,6 +15,15 @@ function App() {
     }
   }, [theme]);
 
+  useEffect(() => {
+    const data = window.localStorage.getItem("showtheme");
+    if (data !== null) setTheme(JSON.parse(data));
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("showtheme", JSON.stringify(theme));
+  }, [theme]);
+
   const handleThemeSwitch = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
